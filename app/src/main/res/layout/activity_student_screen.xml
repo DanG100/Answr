@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    tools:context="com.example.henrylee.hackdavis2.StudentScreen">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/first_name"
+        app:layout_constraintTop_toBottomOf="parent"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <EditText
+        android:id="@+id/student_sign_in_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/first_name_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="@string/last_name"
+        app:layout_constraintTop_toBottomOf="@+id/student_sign_in_first"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <EditText
+        android:id="@+id/student_sign_in_last"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/last_name_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="@string/sid"
+        app:layout_constraintTop_toBottomOf="@+id/student_sign_in_last"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <EditText
+        android:id="@+id/student_sign_in_sid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/sid_hint"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="@string/email_address"
+        app:layout_constraintTop_toBottomOf="@+id/student_sign_in_sid"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <EditText
+        android:id="@+id/student_sign_in_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="@string/class_code"
+        app:layout_constraintTop_toBottomOf="@+id/student_sign_in_email"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <EditText
+        android:id="@+id/student_sign_in_class_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/class_code_hint"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <Button
+        android:id="@+id/student_sign_in_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startQuiz"
+        android:text="Button"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/student_sign_in_class_code"
+        tools:layout_editor_absoluteX="142dp" />
+
+
+</android.support.constraint.ConstraintLayout>

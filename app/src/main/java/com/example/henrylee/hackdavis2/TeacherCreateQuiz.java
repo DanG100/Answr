@@ -79,6 +79,7 @@ public class TeacherCreateQuiz extends AppCompatActivity implements QuestionCrea
                 for(int i=0;i<mSectionsPagerAdapter.getCount();i++)
                 {
                     multipleChoiceQuestion frag = (multipleChoiceQuestion) mSectionsPagerAdapter.getItem(i);
+                    fra
                 }
             }
         });
