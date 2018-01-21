@@ -121,6 +121,7 @@ public class TeacherCreateClass extends Fragment implements View.OnClickListener
 
         //THROW TEACHER DATA INTO FILE HERE
         Intent intent = new Intent(getContext(), TeacherCreateQuiz.class);
+        intent.putExtra("TEACHER",teacherData);
         startActivity(intent);
         if(getActivity()!=null) {
             Intent intentService = new Intent(getActivity(), TeacherNotificationService.class);

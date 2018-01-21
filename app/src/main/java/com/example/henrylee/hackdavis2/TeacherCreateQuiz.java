@@ -23,9 +23,14 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Random;
 
 public class TeacherCreateQuiz extends AppCompatActivity implements QuestionCreateFragment.OnFragmentInteractionListener, multipleChoiceQuestion.OnFragmentInteractionListener, ShortAnswerFragment.OnFragmentInteractionListener {
 
@@ -76,10 +81,17 @@ public class TeacherCreateQuiz extends AppCompatActivity implements QuestionCrea
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference reference = database.getReference();
                 reference = reference.child("quizzes");
+
+                int num = new Random().nextInt(999999);
+                String classCode = "";
+                classCode += num;
+                Toast.makeText(TeacherCreateQuiz.this, classCode, Toast.LENGTH_LONG).show();
+                reference = reference.child(classCode);
                 for(int i=0;i<mSectionsPagerAdapter.getCount();i++)
                 {
                     multipleChoiceQuestion frag = (multipleChoiceQuestion) mSectionsPagerAdapter.getItem(i);
-                    fra
+                    String[] teacher = getIntent().getStringArrayExtra("TEACHER");
+                    reference.setValue(teacher[0]);
                 }
             }
         });
